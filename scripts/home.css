@@ -1,0 +1,124 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+	font-family: Arial;
+}
+
+#wrapper
+{
+	position: relative;
+	margin: 0 auto;
+	width: 488px;
+}
+
+form
+{
+	padding-top: 300px;
+}
+
+  form input
+  {
+	  font-size: 16px;
+	  padding: 5px;
+  }
+
+  form #inppes { width: 360px;  }
+
+#beta
+{
+  position: absolute;
+	left: 300px;
+	top: 70px;
+	background-image: url('../beta.png');
+	width: 80px;
+	height: 81px;
+	opacity: 0.7;
+}
+
+#logo
+{
+  position: absolute;
+	z-index: -1;
+	left: 110px;
+	margin-top: 50px;
+	background-image: url('../souweb.png');
+	width: 244px;
+	height: 231px;
+}
+
+#slogan
+{
+  padding: 60px 0px 40px 40px;
+	color: #777570;
+}
+
+#ultbox { padding: 10px; opacity:0.8; }
+
+   #ultbox #ulttit { margin:5px; }
+   
+   #ultbox #ultlnk { display: table; float: left; margin:5px; }
+   
+ @media only screen and (max-width: 767px) {
+  
+  form #inppes {
+    width: 88%;
+  }
+  
+  #wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  #logo {
+    margin: 0 auto;
+    position: relative;
+    left: auto;
+    margin-top: 50px;
+    background-image: url('../souweb.png');
+    background-size: contain;
+    width: 215px;
+    height: 200px;
+  }
+  
+  #beta {
+    position: relative;
+    float: right;
+    left: auto;
+    top: auto;
+    background-image: url('../beta.png');
+    width: 80px;
+    height: 81px;
+    opacity: 0.7;
+  }
+  
+  form {
+    padding-top: 0px;
+    margin: 40px;
+    text-align: center;
+  }
+  
+    form input {
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 20px;
+    }  
+  
+  #slogan {
+    float: left;
+    padding: 50px 0px 30px 0px;
+    text-align: center;
+  }
+
+  #ultbox {
+    padding: 20px 20px 20px 20px;
+    opacity: 0.8;
+    float: left;
+  }
+
+ }   

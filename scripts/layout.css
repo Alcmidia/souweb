@@ -1,0 +1,175 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+  font-family: Arial;
+	font-size: small;
+  line-height:18px;
+}
+	
+#wrapper
+{
+	width: 780px;
+	padding: 10px;
+}
+
+header
+{
+	display: table;
+	border-bottom: dashed 1px #555555;
+}
+
+  header #logo
+	{
+		float: left;
+		border:0;
+		padding: 15px 0px 10px 15px;
+		width: 100px;
+		height: 95px;
+	}
+	
+
+	header #beta
+	{
+		position: absolute;
+		left: 95px;
+		top: 30px;
+		background-image: url('beta-pequeno.png');
+		width: 30px;
+		height: 30px;
+		opacity: 0.7;
+	}	
+
+  header form
+  {
+	  float: left;
+	  margin: 45px 0px 0px 30px;	
+  }
+
+input
+{
+	font-family:Arial;
+	font-size:16px;
+	padding: 5px;
+}
+
+article
+{
+  padding-top: 5px;
+	width: 800px;
+}
+
+#divinf
+{
+	float: left;
+	width: 760px;
+	padding: 10px;
+}
+
+  #divinf #divpal {	float: left; }
+
+  #divinf #divnum {	float: right; }
+
+#lisdic
+{
+	display: table;
+	padding: 20px 10px 10px 10px;
+	list-style: none;
+}
+
+  #lisdic li { float: left; margin:5px; }
+	
+.divres { padding:15px; margin:10px; }
+
+  .divres .divtit { font-size: medium; overflow: hidden; margin-bottom: 5px; max-height: 20px; }
+	
+	.divres .divtex { display: table; max-height: 56px; overflow: hidden; margin-bottom: 3px; }
+	
+	.divres .divlnk { font-size: small; color:#008000; }
+	
+#divpag { width: 760px; padding: 20px 10px 10px 10px; text-align: center; }
+
+@media only screen and (max-width: 767px) {
+	
+	#wrapper {
+    width: 100%;
+    padding: 0px;
+	}
+	
+	article {
+		width: auto;
+	}
+	
+	#divpag {
+    width: auto;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+	}
+	
+	#divinf {
+    float: none;
+    width: auto;
+    padding: 10px;
+	}
+	
+	 #divpal {
+    margin: 20px;
+	}
+	
+	#divinf #divnum {
+    float: right;
+		margin: 20px 10px 10px 10px;
+	}
+	
+	#inppes {
+		width: 80%;
+		margin-bottom: 10px;
+	}
+	
+	header form {
+		width: 100%;
+    float: left;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+	}
+	
+	input {
+		padding: 10px;
+	}
+	
+	header {
+    display: table;
+    border-bottom: dashed 1px #555555;
+    text-align: center;
+	}
+	
+	header #logo {
+    float: none;
+    border: 0;
+    padding: 15px 0px 10px 15px;
+    width: 150px;
+    height: auto;
+	}
+	
+	body {
+    font-family: Arial;
+    font-size: medium;
+    line-height: 23px;
+	}
+	
+	.divres .divtit {
+    font-size: large;
+		max-height: 70px;
+    margin-bottom: 5px;
+	}
+	
+	.divres .divlnk {
+    font-size: medium;
+    color: #008000;
+	}
+ 
+}
