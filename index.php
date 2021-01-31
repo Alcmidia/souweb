@@ -31,7 +31,7 @@ error_reporting(E_ALL ^ E_NOTICE);
   <form action="busca.php">
 	  <input id="inppes" name="pesquisa" type="Text" autofocus>
 		<input type="Submit" value=" Pesquisar ">
-	  <div id="slogan">O buscador 100% nacional que aprende com você!</div>  
+	  <div id="slogan">O buscador que aprende com você!</div>  
   </form>
   <?php
   // lista as buscas
