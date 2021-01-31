@@ -51,10 +51,10 @@ form
 	height: 231px;
 }
 
-#slogan
-{
-  padding: 60px 0px 40px 40px;
-	color: #777570;
+#slogan {
+  padding: 60px 0px 40px 0px;
+  color: #777570;
+  text-align: center;
 }
 
 #ultbox { padding: 10px; opacity:0.8; }
