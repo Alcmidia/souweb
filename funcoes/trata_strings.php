@@ -2,10 +2,10 @@
 
 function textofull($str)
 {
-  // tira pontuação maldita
+  // tira pontuaï¿½ï¿½o maldita
   $especiais = array("/", "(", ")", ".","|","!",":");
   $str = str_replace($especiais, " ", $str);
-  //troca os - por espaço
+  //troca os - por espaï¿½o
   $str = str_replace("-", " ", $str);
   // troca os _ por -
   $str=str_replace("_", "-", $str);
@@ -23,7 +23,7 @@ function textofull($str)
 
 function st($str) {
 	
-	$a = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõöøùúûıışÿ';
+	$a = 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
 	$b = 'aaaaaaaceeeeiiiidnoooooouuuuybsaaaaaaaceeeeiiiidnoooooouuuyyby';
 	
 	return strtolower(strtr($str, $a, $b));
@@ -54,26 +54,26 @@ function destaca($search, $str, $format, $like=false, $sensitivity=false, &$pos=
 		if ($i < $_ignore)
 			continue;
 			
-		if ($str{$i} == '<' && isset($str{$i+1}) && preg_match('|[A-Z\/]|i', $str{$i+1}))
+		if ($str[$i] == '<' && isset($str[$i+1]) && preg_match('|[A-Z\/]|i', $str[$i+1]))
 			$_tag = true;
-		else if ($_tag && $str{$i} == '>')
+		else if ($_tag && $str[$i] == '>')
 			$_tag = false;
 
-		if (!$_tag && $f($search{0}) == $f($str{$i}) && isset($str{$i+$s_len-1})) {
+		if (!$_tag && $f($search[0]) == $f($str[$i]) && isset($str[$i+$s_len-1])) {
 			
 			$tmp = null;
 			$is = true;
 			
 			for ($j=0; $j < $s_len; $j++) {
-				if ($f($search{$j}) != $f($str{$i+$j})) {
+				if ($f($search[$j]) != $f($str[$i+$j])) {
 					$is = false;
 					break;
 				}
 				else
-					$tmp .= $str{$i+$j};
+					$tmp .= $str[$i+$j];
 			}
 			
-			if ($is && ($like || (!isset($str{$i+$j+1}) || in_array($str{$i+$j}, $end)))) {
+			if ($is && ($like || (!isset($str[$i+$j+1]) || in_array($str[$i+$j], $end)))) {
 
 				if (!is_null($pos))
 					$pos[] = $i;
@@ -88,10 +88,10 @@ function destaca($search, $str, $format, $like=false, $sensitivity=false, &$pos=
 				$f_last++;
 			}
 			else
-				$ret .= $str{$i};
+				$ret .= $str[$i];
 		}
 		else
-			$ret .= $str{$i};
+			$ret .= $str[$i];
 	}
 	
 	return $ret;
@@ -126,19 +126,19 @@ function trata_url($parurl)
 	return $returl;
 }
 
-// gera uma palavra sem caracteres especiais e com traço no lugar do espaço
+// gera uma palavra sem caracteres especiais e com traï¿½o no lugar do espaï¿½o
 function gera_link($palavra)
 {
   $palavra = trim($palavra);
   $palavra = strtolower(preg_replace("[^a-zA-Z0-9-]", "", strtr($palavra, " ", "-")));
-  //remove espaços duplicados
+  //remove espaï¿½os duplicados
   $palavra = preg_replace('/-(?=-)/', '', $palavra);
   return($palavra);  
 }
 
 function tem_acento($string) 
 { 
-    $regExp = "[áàâãäªÁÀÂÃÄéèêëÉÈÊËíìîïÍÌÎÏóòôõöºÓÒÔÕÖúùûüÚÙÛÜçÇÑñ.]";
+    $regExp = "[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.]";
     return preg_match($regExp,$string); 
 } 
 

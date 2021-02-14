@@ -1,7 +1,7 @@
 <?php
 include ("funcoes/conexao.php");
 include ("funcoes/trata_strings.php");
-error_reporting(E_ALL ^ E_NOTICE);
+//error_reporting(E_ALL ^ E_NOTICE);
 ?>
 <!DOCTYPE HTML>
 
@@ -38,7 +38,7 @@ error_reporting(E_ALL ^ E_NOTICE);
   $sqldic  = "SELECT * FROM buscas ORDER BY random() LIMIT 8";	
   $tabdic = pg_query($conn, $sqldic);
   $qtddic = pg_num_rows($tabdic);
-  if ($qtddic>1)
+  if ($qtddic>=1)
   {
     echo '<div id="ultbox"><div id="ulttit">Últimas buscas:</div>';
     while ($regdic = pg_fetch_array($tabdic))

@@ -10,8 +10,6 @@ include ('funcoes/conexao.php');
 
 ini_set('max_execution_time',900); # set execution to 60 seconds
 
-//ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
-
 function remove_http($url) {
    $disallowed = array('http://', 'https://');
    foreach($disallowed as $d) {
@@ -59,7 +57,6 @@ body
 $tabtmp=pg_query($conn, "SELECT * FROM temporaria ORDER BY random() LIMIT 1");
 while ($arrtmp=pg_fetch_array($tabtmp))
 {
-
 
   if ($_POST["urlsug"]) {
 		$url_atual=rtrim($_POST["urlsug"],"/");
