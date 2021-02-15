@@ -14,12 +14,12 @@ order allow,deny
 deny from 189.100.11.129
 allow from all
  
-# Pôr no cache por um mês 
+# Pï¿½r no cache por um mï¿½s 
 <FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf)$"> 
 Header set Cache-Control "max-age=2592000" 
 </FilesMatch> 
 
-# Pôr no cache por uma semana
+# Pï¿½r no cache por uma semana
 <FilesMatch ".(js|pdf|txt)$"> 
 Header set Cache-Control "max-age=604800" 
 </FilesMatch> 
