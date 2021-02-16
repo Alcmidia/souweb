@@ -114,7 +114,8 @@ CREATE TABLE public.paginas (
     pagtit_ft tsvector,
     pagtex_ft tsvector,
     domcod integer,
-    pagmid integer
+    pagmid integer,
+    padgat date DEFAULT CURRENT_DATE
 )
 WITH (oids = false);
 --
